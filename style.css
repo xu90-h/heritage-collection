@@ -580,11 +580,11 @@ footer{
 .pdp-main{
   flex:1;
   min-width:0;
-  max-width:520px;
+  max-width:460px;
   background:var(--cream);
   border:1px solid var(--line);
   border-radius:10px;
-  aspect-ratio:1/1;
+  aspect-ratio:4/5;
   display:flex;
   align-items:center;
   justify-content:center;
