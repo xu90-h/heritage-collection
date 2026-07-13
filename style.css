@@ -7,6 +7,10 @@
   --text:#2b1d10;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
+html,body{
+  max-width:100%;
+  overflow-x:hidden;
+}
 body{
   font-family:"Helvetica Neue",Arial,"PingFang SC",sans-serif;
   color:var(--text);
@@ -690,7 +694,7 @@ footer{
 
   .header-row{
     flex-wrap:wrap;
-    padding:10px 14px;
+    padding:10px 16px;
     gap:10px;
   }
   .logo{order:1;flex:0 0 auto;}
@@ -714,7 +718,7 @@ footer{
   .nav-row{
     justify-content:flex-start;
     gap:22px;
-    padding:10px 14px;
+    padding:10px 16px;
     overflow-x:auto;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
@@ -786,7 +790,7 @@ footer{
     gap:16px;
   }
   .pdp-gallery{flex-direction:column;gap:12px;}
-  .pdp-main{order:1;border-radius:8px;max-width:none;}
+  .pdp-main{order:1;border-radius:8px;max-width:none;aspect-ratio:1/1;max-height:46vh;}
   .pdp-thumbs{
     order:2;
     flex-direction:row;
