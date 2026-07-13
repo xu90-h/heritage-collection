@@ -225,6 +225,37 @@
   }
 
   setInterval(()=>moveHero(1), 4500);
+
+  const heroEl = document.getElementById('top');
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchDeltaX = 0;
+
+  heroEl.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchDeltaX = 0;
+    track.style.transition = 'none';
+  }, { passive: true });
+
+  heroEl.addEventListener('touchmove', (e) => {
+    touchDeltaX = e.touches[0].clientX - touchStartX;
+    const touchDeltaY = e.touches[0].clientY - touchStartY;
+    if (Math.abs(touchDeltaX) > Math.abs(touchDeltaY)) {
+      const percent = (touchDeltaX / heroEl.offsetWidth) * 100;
+      track.style.transform = `translateX(${-index * 100 + percent}%)`;
+    }
+  }, { passive: true });
+
+  heroEl.addEventListener('touchend', () => {
+    track.style.transition = '';
+    if (Math.abs(touchDeltaX) > 40) {
+      moveHero(touchDeltaX < 0 ? 1 : -1);
+    } else {
+      render();
+    }
+    touchDeltaX = 0;
+  });
 </script>
 
 </body>
