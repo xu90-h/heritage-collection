@@ -313,6 +313,98 @@
     color:#8a7a56;
     letter-spacing:.5px;
   }
+
+  /* ---------- mobile layout (desktop untouched above) ---------- */
+  @media (max-width: 768px){
+    .announce{
+      font-size:11px;
+      gap:8px;
+      padding:8px;
+      text-align:center;
+    }
+    .announce span:not(.icon){
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      max-width:52vw;
+    }
+
+    .header-row{
+      padding:10px 14px;
+      gap:10px;
+    }
+    .search-box{
+      width:auto;
+      flex:1;
+      min-width:0;
+      padding:6px 10px;
+      order:2;
+    }
+    .search-box input{font-size:12px;}
+    .logo{order:1;}
+    .logo img{height:40px;}
+    .header-icons{
+      order:3;
+      gap:14px;
+    }
+    .header-icons .icon,
+    .header-icons .icon svg{width:19px;height:19px;}
+
+    .nav-row{
+      justify-content:flex-start;
+      gap:22px;
+      padding:10px 14px;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .nav-row::-webkit-scrollbar{display:none;}
+    .nav-row li{font-size:12px;}
+
+    .hero-slide img{aspect-ratio:4/5;}
+    .hero-caption{
+      left:16px;
+      bottom:20px;
+      font-size:17px;
+    }
+    .hero-arrow{width:28px;height:28px;font-size:14px;}
+    .hero-arrow.prev{left:8px;}
+    .hero-arrow.next{right:8px;}
+    .hero-dots span{width:14px;height:2px;}
+
+    .section{padding:36px 16px;}
+    .section-head h2{font-size:19px;letter-spacing:1px;}
+    .section-head p{font-size:11px;}
+
+    .grid{
+      grid-template-columns:repeat(2, 1fr);
+      gap:12px;
+    }
+    .card .info{padding:8px 10px 12px;}
+    .card .info h3{font-size:12.5px;}
+    .card .info p{font-size:10.5px;}
+    .card .tag{font-size:10px;padding:2px 6px;}
+
+    .footer-inner{
+      padding:32px 16px 20px;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap:28px;
+    }
+    .footer-cols{
+      gap:28px;
+      justify-content:center;
+      width:100%;
+    }
+    .footer-col{flex:1 1 auto;min-width:110px;}
+  }
+
+  @media (max-width: 420px){
+    .announce span:not(.icon){max-width:44vw;}
+    .grid{grid-template-columns:repeat(2, 1fr);gap:10px;}
+    .nav-row{gap:16px;}
+  }
 </style>
 </head>
 <body>
