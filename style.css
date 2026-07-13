@@ -789,19 +789,22 @@ footer{
     flex-direction:column;
     gap:16px;
   }
-  .pdp-gallery{flex-direction:column;gap:12px;}
+  .pdp-gallery{flex-direction:column;gap:12px;width:100%;}
   .pdp-main{order:1;border-radius:8px;max-width:none;aspect-ratio:1/1;max-height:46vh;}
   .pdp-thumbs{
     order:2;
+    flex:none;
+    display:flex;
     flex-direction:row;
     width:100%;
-    min-width:0;
+    max-width:100%;
     overflow-x:auto;
+    overflow-y:hidden;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
   }
   .pdp-thumbs::-webkit-scrollbar{display:none;}
-  .pdp-thumb{flex:0 0 64px;width:64px;height:64px;}
+  .pdp-thumb{flex:none;width:64px;height:64px;}
   .pdp-info{order:3;flex-basis:auto;}
   .pdp-info h1{font-size:19px;}
   .pdp-price{font-size:19px;}
