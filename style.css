@@ -688,25 +688,27 @@ footer{
   }
 
   .header-row{
+    flex-wrap:wrap;
     padding:10px 14px;
     gap:10px;
   }
-  .search-box{
-    width:auto;
-    flex:1;
-    min-width:0;
-    padding:6px 10px;
-    order:2;
-  }
-  .search-box input{font-size:12px;}
-  .logo{order:1;}
-  .logo img{height:56px;}
+  .logo{order:1;flex:0 0 auto;}
+  .logo img{height:44px;}
   .header-icons{
-    order:3;
+    order:2;
+    flex:0 0 auto;
+    margin-left:auto;
     gap:14px;
   }
   .header-icons .icon,
   .header-icons .icon svg{width:19px;height:19px;}
+  .search-box{
+    order:3;
+    flex:1 1 100%;
+    width:100%;
+    padding:6px 10px;
+  }
+  .search-box input{font-size:12px;}
 
   .nav-row{
     justify-content:flex-start;
