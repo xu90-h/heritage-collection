@@ -549,6 +549,7 @@ footer{
 .pdp{
   display:flex;
   align-items:flex-start;
+  justify-content:center;
   gap:32px;
 }
 
