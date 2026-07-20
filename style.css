@@ -756,6 +756,7 @@ footer{
   .launch-date{font-size:17px;margin-bottom:14px;}
   .scroll-row{gap:12px;}
   .scroll-row .card{flex-basis:190px;}
+  .scroll-row .card.cover{flex-basis:100%;}
   .card .info{padding:8px 10px 12px;}
   .card .info h3{font-size:12.5px;}
   .card .info p{font-size:11px;}
